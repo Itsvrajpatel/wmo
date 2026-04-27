@@ -1,0 +1,313 @@
+/* ============================
+   Street Credits Section
+   ============================ */
+
+.section {
+    position: relative;
+    background: #070707;
+    padding-block: var(--sp-3xl);
+    overflow: hidden;
+}
+
+/* Top separator line */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--clr-lime), transparent);
+    opacity: 0.25;
+}
+
+/* Ambient glow blobs */
+.section::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(204, 255, 0, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ---- Header ---- */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-sm);
+    margin-bottom: var(--sp-2xl);
+    text-align: center;
+}
+
+.eyebrow {
+    font-family: var(--ff-head);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clr-lime);
+}
+
+.title {
+    font-family: var(--ff-head);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--clr-white);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-family: var(--ff-body);
+    font-size: 0.95rem;
+    color: var(--clr-muted);
+    margin-top: var(--sp-xs);
+}
+
+/* ---- Stats Bar ---- */
+.statsBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2xl);
+    margin-bottom: var(--sp-2xl);
+    padding: var(--sp-lg) var(--sp-2xl);
+    border: 1px solid var(--clr-border);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(8px);
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.statNumber {
+    font-family: var(--ff-head);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: var(--clr-lime);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.statLabel {
+    font-family: var(--ff-head);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+}
+
+.statDivider {
+    width: 1px;
+    height: 40px;
+    background: var(--clr-border);
+}
+
+/* ---- Carousel Viewport ---- */
+.carouselViewport {
+    position: relative;
+    overflow: hidden;
+    /* Fade edges */
+    mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        #000 8%,
+        #000 92%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        #000 8%,
+        #000 92%,
+        transparent 100%
+    );
+}
+
+/* ---- Track ---- */
+.track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    padding-block: var(--sp-md);
+    animation: scrollTrack 38s linear infinite;
+}
+
+.trackPaused {
+    animation-play-state: paused;
+}
+
+@keyframes scrollTrack {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* ---- Review Card ---- */
+.card {
+    flex-shrink: 0;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-md);
+    padding: var(--sp-lg);
+    background: #0d0d0d;
+    border: 1px solid var(--clr-border);
+    position: relative;
+    overflow: hidden;
+    transition: border-color var(--dur-med) var(--ease),
+                transform var(--dur-med) var(--ease);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent, var(--clr-lime));
+    opacity: 0.7;
+}
+
+.card:hover {
+    border-color: var(--accent, var(--clr-lime));
+    transform: translateY(-4px);
+}
+
+/* ---- Card Tag ---- */
+.cardTag {
+    display: inline-flex;
+    align-self: flex-start;
+    font-family: var(--ff-head);
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clr-black);
+    background: var(--accent, var(--clr-lime));
+    padding: 4px 10px;
+}
+
+/* ---- Stars ---- */
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+.star {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.starFilled {
+    color: var(--clr-lime);
+}
+
+.starEmpty {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+/* ---- Quote ---- */
+.quote {
+    font-family: var(--ff-body);
+    font-size: 0.88rem;
+    font-style: normal;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.75);
+    flex: 1;
+}
+
+.quoteMarks {
+    color: var(--accent, var(--clr-lime));
+    font-family: var(--ff-head);
+    font-size: 1rem;
+    font-weight: 700;
+    vertical-align: -1px;
+}
+
+/* ---- Author ---- */
+.author {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm);
+    padding-top: var(--sp-md);
+    border-top: 1px solid var(--clr-border);
+    margin-top: auto;
+}
+
+.avatar {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    background: var(--accent, var(--clr-lime));
+    color: var(--clr-black);
+    font-family: var(--ff-head);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.authorName {
+    font-family: var(--ff-head);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--clr-white);
+}
+
+.authorHandle {
+    font-family: var(--ff-head);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--clr-muted);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .statsBar {
+        gap: var(--sp-lg);
+        padding: var(--sp-md) var(--sp-lg);
+    }
+
+    .card {
+        width: 290px;
+    }
+}
+
+@media (max-width: 480px) {
+    .statsBar {
+        flex-direction: column;
+        gap: var(--sp-md);
+    }
+
+    .statDivider {
+        width: 40px;
+        height: 1px;
+    }
+
+    .section {
+        padding-block: var(--sp-2xl);
+    }
+}
