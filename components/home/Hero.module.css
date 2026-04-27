@@ -1,0 +1,305 @@
+/* ============================
+   Hero Section
+   ============================ */
+
+.hero {
+    position: relative;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000000;
+    padding-top: var(--navbar-h);
+}
+
+/* ---- Ambient Glow Orb ---- */
+.glowWrap {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.glowOrb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 760px;
+    height: 560px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center,
+            rgba(204, 255, 0, 0.12) 0%,
+            rgba(46, 91, 255, 0.08) 40%,
+            transparent 70%);
+    filter: blur(60px);
+    transition: transform 0.12s linear;
+    will-change: transform;
+}
+
+/* ---- Grid Overlay ---- */
+.gridOverlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 50%, transparent 100%);
+    pointer-events: none;
+}
+
+/* ---- Frame Glow (rectangular border effect from reference) ---- */
+.frameGlow {
+    position: absolute;
+    inset: 0;
+    box-shadow:
+        inset 0 0 160px rgba(204, 255, 0, 0.03),
+        inset 0 0 80px rgba(46, 91, 255, 0.04);
+    pointer-events: none;
+}
+
+/* ---- Content ---- */
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--sp-lg);
+    padding-block: var(--sp-2xl);
+    flex: 1;
+    justify-content: center;
+}
+
+/* Pill */
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--ff-head);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clr-lime);
+    background: rgba(204, 255, 0, 0.08);
+    border: 1px solid rgba(204, 255, 0, 0.2);
+    padding: 6px 16px;
+    border-radius: 99px;
+}
+
+.pillDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--clr-lime);
+    box-shadow: 0 0 6px var(--clr-lime);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+/* Headline */
+.headlineWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--ff-head);
+    font-size: clamp(3.2rem, 9vw, 7.5rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    overflow: hidden;
+}
+
+.lineWhite {
+    color: var(--clr-white);
+    display: block;
+}
+
+.lineAccent {
+    color: var(--clr-lime);
+    display: block;
+    font-style: italic;
+    text-shadow: 0 0 60px rgba(204, 255, 0, 0.4);
+}
+
+.tagline {
+    font-family: var(--ff-head);
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-weight: 600;
+    color: var(--clr-white);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-top: var(--sp-sm);
+    opacity: 0.9;
+}
+
+/* Sub copy */
+.sub {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    color: var(--clr-muted);
+    max-width: 480px;
+    line-height: 1.75;
+}
+
+.inlineLink {
+    color: var(--clr-lime);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity var(--dur-fast);
+}
+
+.inlineLink:hover {
+    opacity: 0.75;
+}
+
+/* CTAs */
+.ctas {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-md);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: var(--sp-sm);
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--ff-head);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-black);
+    background: var(--clr-lime);
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    transition: transform var(--dur-fast) var(--ease),
+        box-shadow var(--dur-fast) var(--ease),
+        background var(--dur-fast);
+}
+
+.btnPrimary:hover {
+    background: #d9ff1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(204, 255, 0, 0.4);
+}
+
+.btnPrimary:active {
+    transform: translateY(0);
+}
+
+.btnOutline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--ff-head);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    transition: border-color var(--dur-fast) var(--ease),
+        color var(--dur-fast) var(--ease),
+        transform var(--dur-fast) var(--ease),
+        box-shadow var(--dur-fast) var(--ease);
+}
+
+.btnOutline:hover {
+    border-color: var(--clr-lime);
+    color: var(--clr-lime);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(204, 255, 0, 0.15);
+}
+
+/* ---- Badges Strip ---- */
+.badgesStrip {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-block: var(--sp-lg);
+    border-top: 1px solid var(--clr-border);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.badgesInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--sp-xl);
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--ff-head);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+    transition: color var(--dur-fast);
+}
+
+.badge:hover {
+    color: var(--clr-lime);
+}
+
+.badgeIcon {
+    color: var(--clr-lime);
+    flex-shrink: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+    .h1 {
+        font-size: clamp(2.4rem, 12vw, 3.5rem);
+    }
+
+    .ctas {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btnPrimary,
+    .btnOutline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .badgesInner {
+        gap: var(--sp-lg);
+    }
+}
