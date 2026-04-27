@@ -1,0 +1,259 @@
+/* ============================
+   Recent Projects Section
+   ============================ */
+
+.section {
+    position: relative;
+    background: #0a0a0a;
+    padding-block: var(--sp-3xl);
+    overflow: hidden;
+}
+
+/* Subtle top separator */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--clr-lime), transparent);
+    opacity: 0.25;
+}
+
+/* ---- Header ---- */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-sm);
+    margin-bottom: var(--sp-2xl);
+    text-align: center;
+}
+
+.eyebrow {
+    font-family: var(--ff-head);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clr-lime);
+}
+
+.title {
+    font-family: var(--ff-head);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--clr-white);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+/* ---- Grid ---- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* ---- Card ---- */
+.card {
+    position: relative;
+    background: var(--card-bg, #111);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: default;
+    transition: background var(--dur-med) var(--ease);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
+    pointer-events: none;
+}
+
+/* ---- Tag / Badge ---- */
+.tag {
+    position: absolute;
+    top: var(--sp-md);
+    left: var(--sp-md);
+    z-index: 3;
+    font-family: var(--ff-head);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: rgba(30, 30, 30, 0.85);
+    color: var(--clr-white);
+    border: 1px solid var(--clr-border);
+    padding: 4px 10px;
+    backdrop-filter: blur(6px);
+}
+
+.tagHighlight {
+    background: var(--clr-lime);
+    color: var(--clr-black);
+    border-color: var(--clr-lime);
+}
+
+/* ---- Image ---- */
+.imageWrap {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s var(--ease);
+}
+
+.card:hover .image {
+    transform: scale(1.04);
+}
+
+/* ---- Card Footer ---- */
+.cardFooter {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--sp-sm);
+    padding: var(--sp-md) var(--sp-md) var(--sp-md);
+    background: #0d0d0d;
+    border-top: 1px solid var(--clr-border);
+    min-height: 76px;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cardTitle {
+    font-family: var(--ff-head);
+    font-size: clamp(0.8rem, 1.3vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    line-height: 1.1;
+}
+
+.cardMeta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.metaLabel {
+    font-family: var(--ff-head);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+}
+
+.metaHandle {
+    font-family: var(--ff-head);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+}
+
+/* ---- Request Button ---- */
+.requestBtn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--ff-head);
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    border: 1px solid var(--clr-border);
+    padding: 7px 10px;
+    line-height: 1.3;
+    transition: border-color var(--dur-fast) var(--ease),
+                color var(--dur-fast) var(--ease),
+                background var(--dur-fast) var(--ease);
+    white-space: nowrap;
+}
+
+.requestBtn:hover {
+    border-color: var(--clr-lime);
+    color: var(--clr-lime);
+    background: rgba(204, 255, 0, 0.06);
+}
+
+/* cardAccent removed */
+
+/* ---- CTA ---- */
+.ctaWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--sp-2xl);
+}
+
+.ctaBtn {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--ff-head);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 16px 40px;
+    transition: border-color var(--dur-fast) var(--ease),
+                color var(--dur-fast) var(--ease),
+                box-shadow var(--dur-fast) var(--ease),
+                transform var(--dur-fast) var(--ease);
+}
+
+.ctaBtn:hover {
+    border-color: var(--clr-lime);
+    color: var(--clr-lime);
+    box-shadow: 0 4px 24px rgba(204, 255, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding-block: var(--sp-2xl);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .imageWrap {
+        aspect-ratio: 4 / 3;
+    }
+}
