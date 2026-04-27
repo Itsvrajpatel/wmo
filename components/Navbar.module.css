@@ -1,0 +1,199 @@
+/* ---- Navbar ---- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: var(--navbar-h);
+    display: flex;
+    align-items: center;
+    transition: background var(--dur-med) var(--ease),
+        backdrop-filter var(--dur-med) var(--ease),
+        border-bottom var(--dur-med) var(--ease);
+}
+
+.navbar.scrolled {
+    background: rgba(7, 7, 7, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-xl);
+}
+
+/* Logo */
+.logo {
+    font-family: var(--ff-head);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--clr-white);
+    flex-shrink: 0;
+}
+
+.logoAccent {
+    color: var(--clr-lime);
+}
+
+/* Desktop Nav */
+.desktopNav {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-xl);
+}
+
+.navLink {
+    position: relative;
+    font-family: var(--ff-head);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+    transition: color var(--dur-fast) var(--ease);
+    padding-bottom: 4px;
+}
+
+.navLink:hover,
+.navLink.active {
+    color: var(--clr-white);
+}
+
+.navLink.active {
+    color: var(--clr-lime);
+}
+
+/* Underline slide-in */
+.linkUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--clr-lime);
+    border-radius: 99px;
+    transition: width var(--dur-med) var(--ease);
+}
+
+.navLink:hover .linkUnderline,
+.navLink.active .linkUnderline {
+    width: 100%;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-md);
+    flex-shrink: 0;
+}
+
+.ctaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--ff-head);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clr-black);
+    background: var(--clr-lime);
+    padding: 9px 20px;
+    border-radius: var(--radius-sm);
+    transition: background var(--dur-fast), transform var(--dur-fast), box-shadow var(--dur-fast);
+}
+
+.ctaBtn:hover {
+    background: #d9ff1a;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(204, 255, 0, 0.35);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    color: var(--clr-white);
+    padding: 6px;
+    border-radius: var(--radius-sm);
+    transition: color var(--dur-fast);
+}
+
+.hamburger:hover {
+    color: var(--clr-lime);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+    position: fixed;
+    top: var(--navbar-h);
+    left: 0;
+    right: 0;
+    background: rgba(7, 7, 7, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--clr-border);
+    display: flex;
+    flex-direction: column;
+    padding: var(--sp-lg) var(--sp-xl);
+    transform: translateY(-110%);
+    opacity: 0;
+    transition: transform var(--dur-med) var(--ease),
+        opacity var(--dur-med) var(--ease);
+    pointer-events: none;
+}
+
+.mobileMenu.mobileOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mobileLink {
+    font-family: var(--ff-head);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--clr-muted);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--clr-border);
+    letter-spacing: 0.04em;
+    transition: color var(--dur-fast), padding-left var(--dur-fast);
+    display: block;
+}
+
+.mobileLink:last-child {
+    border-bottom: none;
+}
+
+.mobileLink:hover,
+.mobileLink.mobileActive {
+    color: var(--clr-lime);
+    padding-left: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .ctaBtn {
+        display: none;
+    }
+}
