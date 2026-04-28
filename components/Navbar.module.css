@@ -14,7 +14,7 @@
 }
 
 .navbar.scrolled {
-    background: rgba(7, 7, 7, 0.85);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--clr-border);
@@ -33,12 +33,12 @@
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -0.5px;
-    color: var(--clr-white);
+    color: var(--clr-black);
     flex-shrink: 0;
 }
 
 .logoAccent {
-    color: var(--clr-lime);
+    color: var(--clr-blue);
 }
 
 /* Desktop Nav */
@@ -62,11 +62,11 @@
 
 .navLink:hover,
 .navLink.active {
-    color: var(--clr-white);
+    color: var(--clr-black);
 }
 
 .navLink.active {
-    color: var(--clr-lime);
+    color: var(--clr-blue);
 }
 
 /* Underline slide-in */
@@ -76,7 +76,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--clr-lime);
+    background: var(--clr-blue);
     border-radius: 99px;
     transition: width var(--dur-med) var(--ease);
 }
@@ -103,30 +103,30 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--clr-black);
-    background: var(--clr-lime);
+    color: var(--clr-white);
+    background: var(--clr-blue);
     padding: 9px 20px;
     border-radius: var(--radius-sm);
     transition: background var(--dur-fast), transform var(--dur-fast), box-shadow var(--dur-fast);
 }
 
 .ctaBtn:hover {
-    background: #d9ff1a;
+    background: #1A43D9;
     transform: translateY(-1px);
-    box-shadow: 0 6px 24px rgba(204, 255, 0, 0.35);
+    box-shadow: 0 6px 24px rgba(46, 91, 255, 0.35);
 }
 
 /* Hamburger */
 .hamburger {
     display: none;
-    color: var(--clr-white);
+    color: var(--clr-black);
     padding: 6px;
     border-radius: var(--radius-sm);
     transition: color var(--dur-fast);
 }
 
 .hamburger:hover {
-    color: var(--clr-lime);
+    color: var(--clr-blue);
 }
 
 /* Mobile Menu */
@@ -135,7 +135,7 @@
     top: var(--navbar-h);
     left: 0;
     right: 0;
-    background: rgba(7, 7, 7, 0.97);
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--clr-border);
@@ -179,7 +179,7 @@
 
 .mobileLink:hover,
 .mobileLink.mobileActive {
-    color: var(--clr-lime);
+    color: var(--clr-blue);
     padding-left: 8px;
 }
 

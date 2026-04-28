@@ -4,7 +4,7 @@
 
 .section {
     position: relative;
-    background: #131313;
+    background: #FFFFFF;
     padding-block: var(--sp-3xl);
     overflow: hidden;
 }
@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--clr-lime), transparent);
+    background: linear-gradient(90deg, transparent, var(--clr-blue), transparent);
     opacity: 0.25;
 }
 
@@ -29,7 +29,7 @@
     left: -10%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(204, 255, 0, 0.04) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(46, 91, 255, 0.04) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -49,7 +49,7 @@
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--clr-lime);
+    color: var(--clr-blue);
 }
 
 .title {
@@ -57,7 +57,7 @@
     font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: var(--clr-white);
+    color: var(--clr-black);
     line-height: 1;
     text-transform: uppercase;
 }
@@ -78,7 +78,7 @@
     margin-bottom: var(--sp-2xl);
     padding: var(--sp-lg) var(--sp-2xl);
     border: 1px solid var(--clr-border);
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(0, 0, 0, 0.02);
     backdrop-filter: blur(8px);
 }
 
@@ -93,7 +93,7 @@
     font-family: var(--ff-head);
     font-size: clamp(1.6rem, 3vw, 2.4rem);
     font-weight: 700;
-    color: var(--clr-lime);
+    color: var(--clr-blue);
     line-height: 1;
     letter-spacing: -0.03em;
 }
@@ -161,7 +161,7 @@
     flex-direction: column;
     gap: var(--sp-md);
     padding: var(--sp-lg);
-    background: #0d0d0d;
+    background: var(--clr-surface);
     border: 1px solid var(--clr-border);
     position: relative;
     overflow: hidden;
@@ -176,12 +176,12 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--accent, var(--clr-lime));
+    background: var(--accent, var(--clr-blue));
     opacity: 0.7;
 }
 
 .card:hover {
-    border-color: var(--accent, var(--clr-lime));
+    border-color: var(--accent, var(--clr-blue));
     transform: translateY(-4px);
 }
 
@@ -194,8 +194,8 @@
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--clr-black);
-    background: var(--accent, var(--clr-lime));
+    color: var(--clr-white);
+    background: var(--accent, var(--clr-blue));
     padding: 4px 10px;
 }
 
@@ -212,11 +212,11 @@
 }
 
 .starFilled {
-    color: var(--clr-lime);
+    color: var(--clr-blue);
 }
 
 .starEmpty {
-    color: rgba(255, 255, 255, 0.15);
+    color: rgba(0, 0, 0, 0.15);
 }
 
 /* ---- Quote ---- */
@@ -225,12 +225,12 @@
     font-size: 0.88rem;
     font-style: normal;
     line-height: 1.65;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(0, 0, 0, 0.75);
     flex: 1;
 }
 
 .quoteMarks {
-    color: var(--accent, var(--clr-lime));
+    color: var(--accent, var(--clr-blue));
     font-family: var(--ff-head);
     font-size: 1rem;
     font-weight: 700;
@@ -251,8 +251,8 @@
     flex-shrink: 0;
     width: 38px;
     height: 38px;
-    background: var(--accent, var(--clr-lime));
-    color: var(--clr-black);
+    background: var(--accent, var(--clr-blue));
+    color: var(--clr-white);
     font-family: var(--ff-head);
     font-size: 0.7rem;
     font-weight: 800;
@@ -274,7 +274,7 @@
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: var(--clr-white);
+    color: var(--clr-black);
 }
 
 .authorHandle {

@@ -12,7 +12,7 @@ const reviews = [
     text: `Bro, the Neo-Static tee hit different. Print quality is insane — colours haven't faded after 10+ washes. This is literally my most-complimented fit.`,
     tag: 'Verified Drop',
     avatar: 'AM',
-    accent: '#CCFF00',
+    accent: '#2E5BFF',
   },
   {
     id: 'r2',
@@ -22,7 +22,7 @@ const reviews = [
     text: `Ordered a custom design and they nailed it on the first try. Turnaround was fast and the GSM feels premium — not that cheap thin stuff you find elsewhere.`,
     tag: 'Custom Order',
     avatar: 'PS',
-    accent: '#CCFF00',
+    accent: '#2E5BFF',
   },
   {
     id: 'r3',
@@ -32,7 +32,7 @@ const reviews = [
     text: `Glow Character tee was everything. The print is crisp, edges are clean, and it actually looks exactly like the mock-up. Will 100% order again.`,
     tag: 'Verified Drop',
     avatar: 'ZK',
-    accent: '#CCFF00',
+    accent: '#2E5BFF',
   },
   {
     id: 'r4',
@@ -42,7 +42,7 @@ const reviews = [
     text: `Solid quality and packaging was sick. Would love a wider size range but the XXL fit me perfectly and the ink sits sharp. Already recommended to 3 friends.`,
     tag: 'Repeat Buyer',
     avatar: 'RV',
-    accent: '#CCFF00',
+    accent: '#2E5BFF',
   },
   {
     id: 'r5',
@@ -52,7 +52,7 @@ const reviews = [
     text: `Backtrack V2 is a statement piece. Wore it to a streetwear meetup and people kept asking where I got it. The weight of the fabric alone screams quality.`,
     tag: 'Verified Drop',
     avatar: 'DP',
-    accent: '#CCFF00',
+    accent: '#2E5BFF',
   },
   {
     id: 'r6',
@@ -62,7 +62,7 @@ const reviews = [
     text: `Their customer service is as good as the tees. Had a question about the print size and got a reply within hours with a revised mock-up. Rare these days.`,
     tag: 'Custom Order',
     avatar: 'SR',
-    accent: '#CCFF00',
+    accent: '#2E5BFF',
   },
 ];
 

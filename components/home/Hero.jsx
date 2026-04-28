@@ -98,7 +98,7 @@ export default function Hero() {
             {/* Floating image — left */}
             <div className={`${styles.floatCard} ${styles.floatLeft}`} ref={floatLeftRef} aria-hidden="true">
                 <Image
-                    src="/assets/Hero_anime.png"
+                    src="/assets/Hero_wild.png"
                     alt="T-shirt print preview"
                     width={420}
                     height={500}

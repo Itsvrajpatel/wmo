@@ -1,6 +1,6 @@
 /* ─── Footer ───────────────────────────────────────────────────────────── */
 .footer {
-  background: #0a0a0a;
+  background: #FFFFFF;
   position: relative;
   overflow: hidden;
 }
@@ -22,9 +22,9 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(204, 255, 0, 0.4) 20%,
-    rgba(255, 255, 255, 0.15) 50%,
-    rgba(204, 255, 0, 0.4) 80%,
+    rgba(46, 91, 255, 0.4) 20%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(46, 91, 255, 0.4) 80%,
     transparent 100%
   );
   position: relative;
@@ -56,19 +56,19 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--clr-black);
   line-height: 1;
 }
 
 .brandAccent {
-  color: #ccff00;
+  color: var(--clr-blue);
 }
 
 .tagline {
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(0, 0, 0, 0.5);
   margin: 0;
   line-height: 1.4;
 }
@@ -87,7 +87,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
   position: relative;
   transition: color 0.2s ease;
@@ -100,12 +100,12 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: #ccff00;
+  background: var(--clr-blue);
   transition: width 0.25s ease;
 }
 
 .link:hover {
-  color: #ffffff;
+  color: var(--clr-black);
 }
 
 .link:hover::after {
@@ -119,13 +119,13 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: #ccff00;
-  color: #0a0a0a;
+  background: var(--clr-blue);
+  color: var(--clr-white);
   text-decoration: none;
   flex-shrink: 0;
   position: relative;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 0 0 rgba(204, 255, 0, 0);
+  box-shadow: 0 0 0 rgba(46, 91, 255, 0);
 }
 
 .mailBtn::before {
@@ -133,14 +133,14 @@
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 1px solid rgba(204, 255, 0, 0.25);
+  border: 1px solid rgba(46, 91, 255, 0.25);
   transition: opacity 0.25s ease;
   opacity: 0;
 }
 
 .mailBtn:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 22px rgba(204, 255, 0, 0.55);
+  box-shadow: 0 0 22px rgba(46, 91, 255, 0.55);
 }
 
 .mailBtn:hover::before {

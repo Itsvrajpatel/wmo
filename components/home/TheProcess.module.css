@@ -4,7 +4,7 @@
 
 .section {
     position: relative;
-    background: #131313;
+    background: #FFFFFF;
     padding-block: var(--sp-3xl);
     overflow: hidden;
 }
@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--clr-lime), transparent);
+    background: linear-gradient(90deg, transparent, var(--clr-blue), transparent);
     opacity: 0.4;
 }
 
@@ -42,7 +42,7 @@
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--clr-lime);
+    color: var(--clr-blue);
 }
 
 .title {
@@ -50,7 +50,7 @@
     font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: var(--clr-white);
+    color: var(--clr-black);
     line-height: 1;
     text-transform: uppercase;
 }
@@ -68,7 +68,7 @@
 /* ---- Single Card ---- */
 .card {
     position: relative;
-    background: #111111;
+    background: var(--clr-surface);
     padding: var(--sp-2xl) var(--sp-xl) var(--sp-xl);
     display: flex;
     flex-direction: column;
@@ -82,14 +82,14 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(204, 255, 0, 0.04) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(46, 91, 255, 0.04) 0%, transparent 60%);
     opacity: 0;
     transition: opacity var(--dur-med) var(--ease);
     pointer-events: none;
 }
 
 .card:hover {
-    background: #161616;
+    background: #F0F0F0;
 }
 
 .card:hover::after {
@@ -104,8 +104,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--clr-lime);
-    color: var(--clr-black);
+    background: var(--clr-blue);
+    color: var(--clr-white);
     font-family: var(--ff-head);
     font-size: 0.78rem;
     font-weight: 800;
@@ -125,19 +125,19 @@
     justify-content: center;
     border: 1px solid var(--clr-border);
     border-radius: 50%;
-    color: var(--clr-white);
+    color: var(--clr-black);
     font-size: 1.3rem;
     margin-top: var(--sp-md);
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.04);
     transition: border-color var(--dur-fast) var(--ease),
         color var(--dur-fast) var(--ease),
         box-shadow var(--dur-fast) var(--ease);
 }
 
 .card:hover .iconWrap {
-    border-color: var(--clr-lime);
-    color: var(--clr-lime);
-    box-shadow: 0 0 16px rgba(204, 255, 0, 0.18);
+    border-color: var(--clr-blue);
+    color: var(--clr-blue);
+    box-shadow: 0 0 16px rgba(46, 91, 255, 0.18);
 }
 
 /* Card text */
@@ -147,7 +147,7 @@
     font-weight: 700;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    color: var(--clr-white);
+    color: var(--clr-black);
     line-height: 1;
 }
 

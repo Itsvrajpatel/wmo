@@ -4,7 +4,7 @@
 
 .section {
     position: relative;
-    background: #0a0a0a;
+    background: #FFFFFF;
     padding-block: var(--sp-3xl);
     overflow: hidden;
 }
@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--clr-lime), transparent);
+    background: linear-gradient(90deg, transparent, var(--clr-blue), transparent);
     opacity: 0.25;
 }
 
@@ -37,7 +37,7 @@
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--clr-lime);
+    color: var(--clr-blue);
 }
 
 .title {
@@ -45,7 +45,7 @@
     font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: var(--clr-white);
+    color: var(--clr-black);
     line-height: 1;
     text-transform: uppercase;
 }
@@ -60,7 +60,7 @@
 /* ---- Card ---- */
 .card {
     position: relative;
-    background: var(--card-bg, #111);
+    background: var(--card-bg, var(--clr-surface));
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -87,17 +87,17 @@
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    background: rgba(30, 30, 30, 0.85);
-    color: var(--clr-white);
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--clr-black);
     border: 1px solid var(--clr-border);
     padding: 4px 10px;
     backdrop-filter: blur(6px);
 }
 
 .tagHighlight {
-    background: var(--clr-lime);
-    color: var(--clr-black);
-    border-color: var(--clr-lime);
+    background: var(--clr-blue);
+    color: var(--clr-white);
+    border-color: var(--clr-blue);
 }
 
 /* ---- Image ---- */
@@ -131,7 +131,7 @@
     justify-content: space-between;
     gap: var(--sp-sm);
     padding: var(--sp-md) var(--sp-md) var(--sp-md);
-    background: #0d0d0d;
+    background: #FFFFFF;
     border-top: 1px solid var(--clr-border);
     min-height: 76px;
 }
@@ -148,7 +148,7 @@
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: var(--clr-white);
+    color: var(--clr-black);
     line-height: 1.1;
 }
 
@@ -188,7 +188,7 @@
     font-weight: 800;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--clr-white);
+    color: var(--clr-black);
     border: 1px solid var(--clr-border);
     padding: 7px 10px;
     line-height: 1.3;
@@ -199,9 +199,9 @@
 }
 
 .requestBtn:hover {
-    border-color: var(--clr-lime);
-    color: var(--clr-lime);
-    background: rgba(204, 255, 0, 0.06);
+    border-color: var(--clr-blue);
+    color: var(--clr-blue);
+    background: rgba(46, 91, 255, 0.06);
 }
 
 /* cardAccent removed */
@@ -221,8 +221,8 @@
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--clr-white);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--clr-black);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 16px 40px;
     transition: border-color var(--dur-fast) var(--ease),
                 color var(--dur-fast) var(--ease),
@@ -231,9 +231,9 @@
 }
 
 .ctaBtn:hover {
-    border-color: var(--clr-lime);
-    color: var(--clr-lime);
-    box-shadow: 0 4px 24px rgba(204, 255, 0, 0.15);
+    border-color: var(--clr-blue);
+    color: var(--clr-blue);
+    box-shadow: 0 4px 24px rgba(46, 91, 255, 0.15);
     transform: translateY(-2px);
 }
 

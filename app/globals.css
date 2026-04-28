@@ -14,10 +14,10 @@
   --clr-white:   #FFFFFF;
 
   /* Surface / Neutral ramp */
-  --clr-bg:      #070707;
-  --clr-surface: #0f0f0f;
-  --clr-border:  rgba(255, 255, 255, 0.08);
-  --clr-muted:   rgba(255, 255, 255, 0.45);
+  --clr-bg:      #FFFFFF;
+  --clr-surface: #F8F8F8;
+  --clr-border:  rgba(0, 0, 0, 0.08);
+  --clr-muted:   rgba(0, 0, 0, 0.55);
 
   /* Typography */
   --ff-head:  'Space Grotesk', sans-serif;
@@ -63,7 +63,7 @@ html {
 body {
   font-family: var(--ff-body);
   background-color: var(--clr-bg);
-  color: var(--clr-white);
+  color: var(--clr-black);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -105,4 +105,4 @@ button {
 /* ----- Scrollbar ----- */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--clr-bg); }
-::-webkit-scrollbar-thumb { background: var(--clr-lime); border-radius: 99px; }
+::-webkit-scrollbar-thumb { background: var(--clr-blue); border-radius: 99px; }
