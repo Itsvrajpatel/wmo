@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FileText, Eye, Package, Zap, Leaf } from 'lucide-react';
 import styles from './Hero.module.css';
@@ -18,6 +19,8 @@ export default function Hero() {
     const ctaRef = useRef(null);
     const badgesRef = useRef(null);
     const glowRef = useRef(null);
+    const floatLeftRef = useRef(null);
+    const floatRightRef = useRef(null);
 
     /* Mouse-parallax glow */
     useEffect(() => {
@@ -65,6 +68,12 @@ export default function Hero() {
                         { y: 20, opacity: 0 },
                         { y: 0, opacity: 1, duration: 0.5, stagger: 0.1 },
                         '-=0.2'
+                    )
+                    .fromTo(
+                        [floatLeftRef.current, floatRightRef.current],
+                        { opacity: 0, scale: 0.85, y: 40 },
+                        { opacity: 1, scale: 1, y: 0, duration: 1, stagger: 0.15, ease: 'power3.out' },
+                        '-=0.8'
                     );
             }, heroRef);
         });
@@ -85,6 +94,30 @@ export default function Hero() {
 
             {/* Vignette frame — mimics the reference's rectangular glow border */}
             <div className={styles.frameGlow} aria-hidden="true" />
+
+            {/* Floating image — left */}
+            <div className={`${styles.floatCard} ${styles.floatLeft}`} ref={floatLeftRef} aria-hidden="true">
+                <Image
+                    src="/assets/Hero_anime.png"
+                    alt="T-shirt print preview"
+                    width={420}
+                    height={500}
+                    className={styles.floatImg}
+                    priority
+                />
+            </div>
+
+            {/* Floating image — right */}
+            <div className={`${styles.floatCard} ${styles.floatRight}`} ref={floatRightRef} aria-hidden="true">
+                <Image
+                    src="/assets/Hero_popye.png"
+                    alt="T-shirt print preview"
+                    width={420}
+                    height={500}
+                    className={styles.floatImg}
+                    priority
+                />
+            </div>
 
             {/* Content */}
             <div className={`container ${styles.content}`}>
