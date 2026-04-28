@@ -4,7 +4,7 @@
 
 .section {
     position: relative;
-    background: #0a0a0a;
+    background: #131313;
     padding-block: var(--sp-3xl);
     overflow: hidden;
 }
@@ -55,14 +55,6 @@
     text-transform: uppercase;
 }
 
-.headerLine {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, var(--clr-border), transparent);
-    max-width: 280px;
-    align-self: center;
-    margin-bottom: 6px;
-}
 
 /* ---- Cards Grid ---- */
 .grid {
@@ -138,8 +130,8 @@
     margin-top: var(--sp-md);
     background: rgba(255, 255, 255, 0.04);
     transition: border-color var(--dur-fast) var(--ease),
-                color var(--dur-fast) var(--ease),
-                box-shadow var(--dur-fast) var(--ease);
+        color var(--dur-fast) var(--ease),
+        box-shadow var(--dur-fast) var(--ease);
 }
 
 .card:hover .iconWrap {
@@ -167,22 +159,7 @@
     max-width: 280px;
 }
 
-/* Hover bottom accent line */
-.cardAccent {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--clr-lime);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--dur-med) var(--ease);
-}
 
-.card:hover .cardAccent {
-    transform: scaleX(1);
-}
 
 /* ---- Responsive ---- */
 @media (max-width: 860px) {

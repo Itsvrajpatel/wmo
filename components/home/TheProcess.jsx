@@ -50,7 +50,7 @@ export default function TheProcess() {
             <span className={styles.eyebrow}>How It Works</span>
             <h2 id="process-heading" className={styles.title}>The Process</h2>
           </div>
-          <div className={styles.headerLine} aria-hidden="true" />
+          {/* <div className={styles.headerLine} aria-hidden="true" /> */}
         </div>
 
         {/* Cards */}
@@ -61,7 +61,6 @@ export default function TheProcess() {
               <div className={styles.iconWrap} aria-hidden="true">{icon}</div>
               <h3 className={styles.cardTitle}>{title}</h3>
               <p className={styles.cardBody}>{body}</p>
-              <div className={styles.cardAccent} aria-hidden="true" />
             </article>
           ))}
         </div>
