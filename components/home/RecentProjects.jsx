@@ -5,38 +5,37 @@ import styles from './RecentProjects.module.css';
 
 const projects = [
   {
-    id: 'neo-static-tee',
-    title: 'Neo-Static Tee',
-    projectHandle: '@CyberArtist',
-    // tag: 'CASE STUDY',
+    id: 'luffy-print',
+    title: 'Luffy Print',
+    projectHandle: '@AnimeStyle',
+    // tag: 'FEATURED',
     tagHighlight: true,
     bg: '#0d0d0d',
-    image: '/projects/neo-static.jpg',
-    // placeholder gradient if image missing
+    image: '/assets/Luffy.jpeg',
     gradient: 'linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)',
   },
   {
-    id: 'draft-01-white',
-    title: 'Draft-01 White',
-    projectHandle: '@Architex',
+    id: 'wild-print',
+    title: 'Wild Print',
+    projectHandle: '@NatureVibes',
     bg: '#0d0d0d',
-    image: '/projects/draft-01.jpg',
+    image: '/assets/Wild.jpeg',
     gradient: 'linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)',
   },
   {
-    id: 'glow-character',
-    title: 'Glow Character',
-    projectHandle: '@Stencil.Kid',
+    id: 'f1-print',
+    title: 'F1 Print',
+    projectHandle: '@SpeedRacer',
     bg: '#0a0a0a',
-    image: '/projects/glow-character.jpg',
+    image: '/assets/F1.jpeg',
     gradient: 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)',
   },
   {
-    id: 'backtrack-v2',
-    title: 'Backtrack V2',
-    projectHandle: '@NaxMaster',
+    id: 'popey-print',
+    title: 'Popey Print',
+    projectHandle: '@ClassicToon',
     bg: '#141414',
-    image: '/projects/backtrack-v2.jpg',
+    image: '/assets/Popey.jpeg',
     gradient: 'linear-gradient(135deg, #1c1c1c 0%, #141414 100%)',
   },
 ];
@@ -48,7 +47,7 @@ export default function RecentProjects() {
 
         {/* Header */}
         <div className={styles.header}>
-          <span className={styles.eyebrow}>Portfolio Highlights</span>
+          <span className={styles.eyebrow}>Design Highlights</span>
           <h2 id="projects-heading" className={styles.title}>Recent Prints</h2>
         </div>
 
