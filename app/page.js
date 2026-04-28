@@ -1,6 +1,7 @@
 import Hero from '@/components/home/Hero';
 import TheProcess from '@/components/home/TheProcess';
 import RecentProjects from '@/components/home/RecentProjects';
+import StreetCredits from '@/components/home/StreetCredits';
 
 export const metadata = {
   title: 'WearMeOut — Premium Custom T-Shirt Printing',
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Hero />
       <TheProcess />
       <RecentProjects />
+      <StreetCredits />
     </>
   );
 }
