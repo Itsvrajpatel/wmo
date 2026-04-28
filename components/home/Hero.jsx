@@ -99,7 +99,7 @@ export default function Hero() {
                 <div className={styles.headlineWrap} ref={headlineRef}>
                     <h1 className={styles.h1}>
                         <span data-anim className={styles.lineWhite}>WEAR YOUR</span>
-                        <span data-anim className={styles.lineAccent}>IDENTITY.</span>
+                        <span data-anim className={styles.lineAccent}>IDENTITY</span>
                     </h1>
                     <p data-anim className={styles.tagline}>
                         Print Your Style.
@@ -110,8 +110,6 @@ export default function Hero() {
                 <p className={styles.sub} ref={subRef}>
                     High-voltage custom streetwear production. Premium manufacturing,
                     industrial-grade inks, zero apologies.{' '}
-                    <Link href="/shop" className={styles.inlineLink}>View our catalogue</Link>
-                    {' '}or start your custom order.
                 </p>
 
                 {/* CTAs */}

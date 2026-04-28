@@ -4,7 +4,8 @@
 
 .hero {
     position: relative;
-    min-height: 100dvh;
+    height: 100dvh;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,7 +71,7 @@
     align-items: center;
     text-align: center;
     gap: var(--sp-lg);
-    padding-block: var(--sp-2xl);
+    padding-block: var(--sp-lg);
     flex: 1;
     justify-content: center;
 }
@@ -196,19 +197,22 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--clr-black);
-    background: var(--clr-lime);
+    color: var(--clr-white);
+    background: transparent;
+    border: 1px solid var(--clr-lime);
     padding: 14px 28px;
     border-radius: var(--radius-sm);
-    transition: transform var(--dur-fast) var(--ease),
-        box-shadow var(--dur-fast) var(--ease),
-        background var(--dur-fast);
+    transition: border-color var(--dur-fast) var(--ease),
+        color var(--dur-fast) var(--ease),
+        transform var(--dur-fast) var(--ease),
+        box-shadow var(--dur-fast) var(--ease);
 }
 
 .btnPrimary:hover {
-    background: #d9ff1a;
+    border-color: var(--clr-lime);
+    color: var(--clr-lime);
     transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(204, 255, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(204, 255, 0, 0.15);
 }
 
 .btnPrimary:active {
@@ -273,9 +277,6 @@
     transition: color var(--dur-fast);
 }
 
-.badge:hover {
-    color: var(--clr-lime);
-}
 
 .badgeIcon {
     color: var(--clr-lime);
