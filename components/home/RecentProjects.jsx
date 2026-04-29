@@ -35,7 +35,7 @@ const projects = [
     title: 'Popey Print',
     projectHandle: '@ClassicToon',
     bg: '#FFFFFF',
-    image: '/assets/Popey.jpeg',
+    image: '/assets/Popeye.jpeg',
     gradient: 'linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%)',
   },
 ];
