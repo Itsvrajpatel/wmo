@@ -35,6 +35,8 @@
     letter-spacing: -0.5px;
     color: var(--clr-black);
     flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 17px;
 }
 
 .logoAccent {

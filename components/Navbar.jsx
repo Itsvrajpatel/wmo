@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import styles from './Navbar.module.css';
@@ -9,8 +10,6 @@ import styles from './Navbar.module.css';
 const NAV_LINKS = [
     { label: 'Home', href: '/' },
     { label: 'Shop', href: '/shop' },
-    { label: 'Trending', href: '/trending' },
-    { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
 ];
 
@@ -34,7 +33,14 @@ export default function Navbar() {
 
                 {/* Logo */}
                 <Link href="/" className={styles.logo} aria-label="WearMeOut home">
-                    <span className={styles.logoAccent}>Wear</span>MeOut
+                    <Image
+                        src="/assets/Logo.PNG"
+                        alt="WearMeOut Logo"
+                        width={200}
+                        height={200}
+                        style={{ objectFit: 'contain', display: 'block' }}
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Nav */}
