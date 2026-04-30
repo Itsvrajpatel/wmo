@@ -318,8 +318,8 @@
     transform: scale(1.02);
 }
 
-/* Hide on small screens — not enough room */
-@media (max-width: 900px) {
+/* Hide on small screens and tablets — not enough room */
+@media (max-width: 1100px) {
     .floatCard {
         display: none;
     }
