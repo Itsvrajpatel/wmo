@@ -59,7 +59,7 @@ export default function Footer() {
         {/* Right: Socials CTA */}
         <div className={styles.socials}>
           <a
-            href="https://instagram.com/wearmeout"
+            href="https://www.instagram.com/wearmeout.in"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialBtn}
@@ -68,7 +68,7 @@ export default function Footer() {
             <InstagramIcon size={20} strokeWidth={2} />
           </a>
           <a
-            href="mailto:hello@wearmeout.in"
+            href="mailto:wearmeoutin.com@gmail.com"
             className={styles.socialBtn}
             aria-label="Send us an email"
             id="footer-email-cta"
