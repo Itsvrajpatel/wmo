@@ -239,6 +239,8 @@
 
 .addToCartBtn {
   width: 100%;
+  text-align: center;
+  display: block;
   background-color: var(--clr-blue);
   color: var(--clr-white);
   padding: 1.25rem;
