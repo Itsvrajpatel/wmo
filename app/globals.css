@@ -7,28 +7,28 @@
 /* ----- CSS Variables / Design Tokens ----- */
 :root {
   /* Brand Colors */
-  --clr-lime:    #CCFF00;
-  --clr-blue:    #2E5BFF;
-  --clr-red:     #FF3D00;
-  --clr-black:   #000000;
-  --clr-white:   #FFFFFF;
+  --clr-lime: #CCFF00;
+  --clr-blue: #2E5BFF;
+  --clr-red: #FF3D00;
+  --clr-black: #000000;
+  --clr-white: #FFFFFF;
 
   /* Surface / Neutral ramp */
-  --clr-bg:      #FFFFFF;
+  --clr-bg: #FFFFFF;
   --clr-surface: #F8F8F8;
-  --clr-border:  rgba(0, 0, 0, 0.08);
-  --clr-muted:   rgba(0, 0, 0, 0.55);
+  --clr-border: rgba(0, 0, 0, 0.08);
+  --clr-muted: rgba(0, 0, 0, 0.55);
 
   /* Typography */
-  --ff-head:  'Space Grotesk', sans-serif;
-  --ff-body:  'Plus Jakarta Sans', sans-serif;
+  --ff-head: 'Space Grotesk', sans-serif;
+  --ff-body: 'Plus Jakarta Sans', sans-serif;
 
   /* Spacing scale */
-  --sp-xs:  0.25rem;
-  --sp-sm:  0.5rem;
-  --sp-md:  1rem;
-  --sp-lg:  1.5rem;
-  --sp-xl:  2.5rem;
+  --sp-xs: 0.25rem;
+  --sp-sm: 0.5rem;
+  --sp-md: 1rem;
+  --sp-lg: 1.5rem;
+  --sp-xl: 2.5rem;
   --sp-2xl: 4rem;
   --sp-3xl: 6rem;
 
@@ -38,9 +38,9 @@
   --radius-lg: 16px;
 
   /* Transitions */
-  --ease:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --dur-fast: 200ms;
-  --dur-med:  350ms;
+  --dur-med: 350ms;
   --dur-slow: 600ms;
 
   /* Navbar height */
@@ -48,7 +48,9 @@
 }
 
 /* ----- Reset ----- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -73,7 +75,8 @@ a {
   text-decoration: none;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   display: block;
 }
@@ -98,11 +101,20 @@ button {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
 
 /* ----- Scrollbar ----- */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--clr-bg); }
-::-webkit-scrollbar-thumb { background: var(--clr-blue); border-radius: 99px; }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-blue);
+  border-radius: 99px;
+}
