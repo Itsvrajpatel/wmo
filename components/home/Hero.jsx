@@ -98,7 +98,7 @@ export default function Hero() {
             {/* Floating image — left */}
             <div className={`${styles.floatCard} ${styles.floatLeft}`} ref={floatLeftRef} aria-hidden="true">
                 <Image
-                    src="/assets/Hero_wild.png"
+                    src="/assets/Hero_wildleft.png"
                     alt="T-shirt print preview"
                     width={420}
                     height={500}
@@ -110,7 +110,7 @@ export default function Hero() {
             {/* Floating image — right */}
             <div className={`${styles.floatCard} ${styles.floatRight}`} ref={floatRightRef} aria-hidden="true">
                 <Image
-                    src="/assets/Hero_popye.png"
+                    src="/assets/Hero_wild2.png"
                     alt="T-shirt print preview"
                     width={420}
                     height={500}
