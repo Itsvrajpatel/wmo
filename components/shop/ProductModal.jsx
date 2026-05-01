@@ -76,7 +76,7 @@ export default function ProductModal({ product, onClose }) {
                 <span>{product.rating}</span>
               </div>
               <h2 className={styles.title}>{product.name}</h2>
-              <p className={styles.price}>${product.price.toFixed(2)}</p>
+              <p className={styles.price}>₹{product.price.toFixed(2)}</p>
             </div>
 
             <div className={styles.description}>
@@ -100,9 +100,9 @@ export default function ProductModal({ product, onClose }) {
 
             <div className={styles.actions}>
               <Link href="/contact" className={styles.addToCartBtn}>
-                Contact to Buy — ${product.price.toFixed(2)}
+                Message to Buy
               </Link>
-              <p className={styles.shippingInfo}>Free shipping on orders over $100</p>
+              <p className={styles.shippingInfo}>Free shipping on orders over ₹100</p>
             </div>
           </div>
         </div>
