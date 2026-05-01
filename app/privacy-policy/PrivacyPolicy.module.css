@@ -1,0 +1,157 @@
+/* ============================
+   Privacy Policy Page
+   ============================ */
+
+.page {
+  padding-top: calc(var(--navbar-h) + var(--sp-3xl));
+  padding-bottom: var(--sp-3xl);
+  min-height: 100vh;
+  background-color: var(--clr-bg);
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding-inline: var(--sp-xl);
+}
+
+/* ---- Header ---- */
+.header {
+  margin-bottom: var(--sp-3xl);
+  border-bottom: 1px solid var(--clr-border);
+  padding-bottom: var(--sp-2xl);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--ff-head);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-blue);
+  background: rgba(46, 91, 255, 0.08);
+  border: 1px solid rgba(46, 91, 255, 0.2);
+  padding: 5px 14px;
+  border-radius: 99px;
+  margin-bottom: var(--sp-lg);
+}
+
+.title {
+  font-family: var(--ff-head);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--clr-black);
+  margin-bottom: var(--sp-sm);
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: var(--clr-muted);
+  margin-bottom: var(--sp-lg);
+}
+
+.intro {
+  font-size: 1.05rem;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.75;
+  max-width: 640px;
+}
+
+/* ---- Body ---- */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2xl);
+}
+
+/* ---- Section ---- */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+}
+
+.sectionTitle {
+  font-family: var(--ff-head);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--clr-black);
+  letter-spacing: -0.01em;
+}
+
+.section p {
+  font-size: 0.975rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.8;
+}
+
+/* ---- List ---- */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+  padding-left: var(--sp-md);
+}
+
+.list li {
+  font-size: 0.975rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.75;
+  position: relative;
+  padding-left: var(--sp-lg);
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-blue);
+  flex-shrink: 0;
+}
+
+/* ---- Inline link ---- */
+.link {
+  color: var(--clr-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--dur-fast);
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .page {
+    padding-top: calc(var(--navbar-h) + var(--sp-xl));
+    padding-bottom: var(--sp-2xl);
+  }
+
+  .container {
+    padding-inline: var(--sp-lg);
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.05rem;
+  }
+}
