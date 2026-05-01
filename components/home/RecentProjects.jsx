@@ -7,27 +7,22 @@ const projects = [
   {
     id: 'luffy-print',
     title: 'Luffy Print',
-    projectHandle: '@AnimeStyle',
-    // tag: 'FEATURED',
-    tagHighlight: true,
     bg: '#FFFFFF',
     image: '/assets/Luffy.jpeg',
     gradient: 'linear-gradient(135deg, #F0F0F0 0%, #FFFFFF 100%)',
   },
   {
-    id: 'wild-print',
-    title: 'Wild Print',
-    projectHandle: '@NatureVibes',
+    id: 'nature-print',
+    title: 'Nature Print',
     bg: '#FFFFFF',
-    image: '/assets/Wild.jpeg',
+    image: '/assets/shop/nature_front.jpeg',
     gradient: 'linear-gradient(135deg, #F0F0F0 0%, #FFFFFF 100%)',
   },
   {
-    id: 'f1-print',
-    title: 'F1 Print',
-    projectHandle: '@SpeedRacer',
+    id: 'Leopard-Print',
+    title: 'Leopard Print',
     bg: '#FFFFFF',
-    image: '/assets/F1.jpeg',
+    image: '/assets/Wild.jpeg',
     gradient: 'linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%)',
   },
   {
@@ -77,10 +72,9 @@ export default function RecentProjects() {
               <div className={styles.cardFooter}>
                 <div className={styles.cardInfo}>
                   <span className={styles.cardTitle}>{p.title}</span>
-                  <div className={styles.cardMeta}>
-                    <span className={styles.metaLabel}>Project:</span>
+                  {/* <div className={styles.cardMeta}>
                     <span className={styles.metaHandle}>{p.projectHandle}</span>
-                  </div>
+                  </div> */}
                 </div>
                 <Link href="/contact" className={styles.requestBtn} aria-label={`Request info for ${p.title}`}>
                   Request<br />Info
