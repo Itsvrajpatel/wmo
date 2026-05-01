@@ -214,5 +214,19 @@
   
   .title {
     font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .subtitle {
+    text-align: center;
+  }
+  
+  .contactDetails {
+    text-align: center;
+  }
+  
+  .detailLabel,
+  .detailValue {
+    text-align: center;
   }
 }
