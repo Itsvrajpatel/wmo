@@ -7,16 +7,17 @@ import styles from './Shop.module.css';
 import ProductModal from './ProductModal';
 
 const PRODUCTS = [
-  { id: 1, name: "Formula 1 Racing Tee", price: 35.00, category: "Sports", image: "/assets/F1.jpeg", images: ["/assets/F1.jpeg", "/assets/Wild.jpeg"], rating: 4.8, description: "A high-octane racing tee featuring classic F1 styling. Perfect for race day or streetwear styling.", details: ["100% Premium Cotton", "Heavyweight 240gsm", "Oversized fit", "Screen printed design"] },
-  { id: 2, name: "Luffy Anime Special", price: 40.00, category: "Anime", image: "/assets/Luffy.jpeg", images: ["/assets/Luffy.jpeg", "/assets/Popeye.jpeg"], rating: 4.9, description: "Show off your love for anime with this premium Luffy print. High quality print that won't fade after washing.", details: ["100% Premium Cotton", "Heavyweight 240gsm", "Oversized fit", "DTG print"] },
-  { id: 3, name: "Popeye Classic", price: 30.00, category: "Cartoon", image: "/assets/Popey.jpeg", images: ["/assets/Popey.jpeg", "/assets/Hero_popye.png"], rating: 4.5, description: "A nostalgic classic. The Popeye graphic print brings back childhood memories in a stylish, modern fit.", details: ["100% Premium Cotton", "Heavyweight 240gsm", "Boxy fit", "Vintage wash"] },
-  { id: 4, name: "Wild Graphic Print", price: 45.00, category: "Graphic", image: "/assets/Wild.jpeg", images: ["/assets/Wild.jpeg", "/assets/F1.jpeg"], rating: 5.0, description: "Go wild with this intricate graphic print. A bold statement piece for any wardrobe.", details: ["100% Premium Cotton", "Heavyweight 240gsm", "Oversized fit", "Screen printed design"] },
-  { id: 5, name: "Hero Popeye Edition", price: 35.00, category: "Cartoon", image: "/assets/Hero_popye.png", images: ["/assets/Hero_popye.png", "/assets/Popey.jpeg"], rating: 4.6, description: "The classic hero in a new light. This edition features a vibrant, high-contrast print.", details: ["100% Premium Cotton", "Heavyweight 240gsm", "Standard fit", "DTG print"] },
-  { id: 6, name: "Hero Wild Edition", price: 45.00, category: "Graphic", image: "/assets/Hero_wild.png", images: ["/assets/Hero_wild.png", "/assets/Wild.jpeg"], rating: 4.7, description: "A darker, grittier take on our wild graphic. Perfect for those who prefer an edgy look.", details: ["100% Premium Cotton", "Heavyweight 240gsm", "Oversized fit", "Screen printed design"] },
-  { id: 7, name: "Popeye Vintage", price: 32.00, category: "Cartoon", image: "/assets/Popeye.jpeg", images: ["/assets/Popeye.jpeg", "/assets/Hero_popye.png"], rating: 4.4, description: "A faded, vintage look for the ultimate retro feel. This tee feels like it's been your favorite for years.", details: ["100% Premium Cotton", "Heavyweight 240gsm", "Boxy fit", "Vintage wash"] },
+  { id: 1, name: "Skull Print", price: 450, category: "Skull", image: "/assets/shop/skull_front.jpeg", images: ["/assets/shop/skull_front.jpeg", "/assets/shop/skull_back.jpeg"], rating: 4.8, description: "Turn heads with this bold statement t-shirt featuring a striking skull and snake graphic design. Crafted for those who embrace edgy streetwear fashion, this oversized tee blends comfort with attitude.", details: ["100% Premium cotton comfort ", "Relaxed oversized fit", "V Breathable & all-day easy", "Built for bold, everyday looks", "Unisex"] },
+  { id: 2, name: "Minion Print", price: 450, category: "Cartoon", image: "/assets/shop/minnion_front.jpeg", images: ["/assets/shop/minnion_front.jpeg", "/assets/shop/minnion_back.jpeg"], rating: 4.9, description: "'Endless Summer' isn’t just a print - it’s a reminder to slow down, chill, and live in the moment. Designed for those who carry summer energy wherever they go.", details: ["100% Premium cotton comfort ", "Relaxed oversized fit", "V Breathable & all-day easy", "Built for bold, everyday looks", "Unisex"] },
+  { id: 3, name: "Cat Print", price: 450, category: "Animal", image: "/assets/shop/cat_front.jpeg", images: ["/assets/shop/cat_front.jpeg", "/assets/shop/cat_back.jpeg"], rating: 4.5, description: "Inspired by strength, mystery, and fearless individuality, this design blends a fierce wolf illustration with intricate tribal elements to create a bold visual statement. The detailed artwork represents confidence and instinct - made for those who move with purpose and stand out without trying.", details: ["100% Premium cotton comfort ", "Relaxed oversized fit", "V Breathable & all-day easy", "Built for bold, everyday looks", "Unisex"] },
+  { id: 4, name: "Nature Print", price: 450, category: "Nature", image: "/assets/shop/nature_front.jpeg", images: ["/assets/shop/nature_front.jpeg", "/assets/shop/nature_back.jpeg"], rating: 4.5, description: "Inspired by optimism and fresh beginnings, this design captures the feeling of moving forward with a positive mindset. The warm tones, playful typography, and nature elements like sun, clouds, and rainbow come together to symbolize brighter days ahead.", details: ["100% Premium cotton comfort ", "Relaxed oversized fit", "V Breathable & all-day easy", "Built for bold, everyday looks", "Unisex"] },
+  { id: 5, name: "Hulk print", price: 450, category: "Cartoon", image: "/assets/shop/hulk_front.jpeg", images: ["/assets/shop/hulk_front.jpeg", "/assets/shop/hulk_back.jpeg"], rating: 4.8, description: "Inspired by raw strength and unstoppable energy, this design captures the moment of breaking through limits. The bold hand graphic emerging with power reflects inner rage, resilience, and transformation - a symbol of pushing past boundaries.", details: ["100% Premium cotton comfort ", "Relaxed oversized fit", "V Breathable & all-day easy", "Built for bold, everyday looks", "Unisex"] },
+  { id: 6, name: "Leopard Print", price: 450, category: "Animal", image: "/assets/shop/leopard_front.jpeg", images: ["/assets/shop/leopard_front.jpeg", "/assets/shop/leopard_back.jpeg"], rating: 4.4, description: "Inspired by raw confidence and untamed spirit, this design captures the essence of moving boldly through life. The detailed leopard artwork reflects strength, focus, and quiet dominance - a symbol of staying wild while remaining in control.", details: ["100% Premium cotton comfort ", "Relaxed oversized fit", "V Breathable & all-day easy", "Built for bold, everyday looks", "Unisex"] },
+  { id: 7, name: "Popeye Print", price: 450, category: "Cartoon", image: "/assets/shop/popeye_front.jpeg", images: ["/assets/shop/popeye_front.jpeg", "/assets/shop/popeye_back.jpeg"], rating: 4.7, description: "Inspired by classic cartoon strength and timeless confidence, this design brings a playful yet powerful vibe to life. Featuring a bold, nostalgic character graphic paired with vibrant colors, it represents energy, resilience, and a never-give-up attitude.", details: ["100% Premium cotton comfort ", "Relaxed oversized fit", "V Breathable & all-day easy", "Built for bold, everyday looks", "Unisex"] },
+  { id: 8, name: "Solid Brand Print", price: 450, category: "Brand", image: "/assets/shop/blue_front.jpeg", images: ["/assets/shop/blue_front.jpeg"], rating: 4.9, description: "Built around a bold and minimal aesthetic, this design focuses on clean typography that speaks confidence without overdoing it. The “Wear Me Out” print reflects a carefree, go-all-in attitude - simple, strong, and effortlessly expressive.", details: ["100% Premium cotton comfort ", "Relaxed oversized fit", "V Breathable & all-day easy", "Built for bold, everyday looks", "Unisex"]}
 ];
 
-const CATEGORIES = ["All", "Sports", "Anime", "Cartoon", "Graphic"];
+const CATEGORIES = ["All", "Nature", "Animal", "Cartoon", "Skull", "Brand"];
 
 
 export default function ShopClient() {
@@ -44,8 +45,8 @@ export default function ShopClient() {
     }
 
     if (searchQuery.trim() !== '') {
-      result = result.filter(p => 
-        p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      result = result.filter(p =>
+        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.category.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
@@ -62,7 +63,7 @@ export default function ShopClient() {
   return (
     <section className={styles.shopSection}>
       <div className={styles.container}>
-        
+
         {/* Page Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>All Collections</h1>
@@ -70,8 +71,8 @@ export default function ShopClient() {
         </div>
 
         {/* Mobile Filter Toggle */}
-        <button 
-          className={styles.filterToggle} 
+        <button
+          className={styles.filterToggle}
           onClick={() => setFilterOpen(true)}
           aria-label="Open filters"
         >
@@ -100,8 +101,8 @@ export default function ShopClient() {
             {/* Mobile close button */}
             <div className={styles.sidebarHeader}>
               <h2 className={styles.sidebarHeading}>Filters</h2>
-              <button 
-                className={styles.closeBtn} 
+              <button
+                className={styles.closeBtn}
                 onClick={() => setFilterOpen(false)}
                 aria-label="Close filters"
               >
@@ -119,9 +120,9 @@ export default function ShopClient() {
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <input 
-                  type="text" 
-                  placeholder="Find your style..." 
+                <input
+                  type="text"
+                  placeholder="Find your style..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className={styles.searchInput}
@@ -134,7 +135,7 @@ export default function ShopClient() {
               <ul className={styles.categoryList}>
                 {CATEGORIES.map(cat => (
                   <li key={cat}>
-                    <button 
+                    <button
                       className={`${styles.categoryBtn} ${activeCategory === cat ? styles.activeCategory : ''}`}
                       onClick={() => setActiveCategory(cat)}
                     >
@@ -150,7 +151,7 @@ export default function ShopClient() {
 
             <div className={styles.filterGroup}>
               <h3 className={styles.filterTitle}>Sort By Price</h3>
-              <select 
+              <select
                 value={priceSort}
                 onChange={(e) => setPriceSort(e.target.value)}
                 className={styles.selectInput}
@@ -160,11 +161,11 @@ export default function ShopClient() {
                 <option value="high">High to Low</option>
               </select>
             </div>
-            
+
 
             {/* Mobile apply button */}
-            <button 
-              className={styles.applyBtn} 
+            <button
+              className={styles.applyBtn}
               onClick={() => setFilterOpen(false)}
             >
               Show {filteredProducts.length} Results
@@ -180,23 +181,23 @@ export default function ShopClient() {
             {filteredProducts.length > 0 ? (
               <div className={styles.productGrid}>
                 {filteredProducts.map(product => (
-                  <div 
-                    key={product.id} 
+                  <div
+                    key={product.id}
                     className={styles.productCard}
                     onClick={() => setSelectedProduct(product)}
                     style={{ cursor: 'pointer' }}
                   >
                     <div className={styles.imageContainer}>
-                      <Image 
-                        src={product.image} 
-                        alt={product.name} 
+                      <Image
+                        src={product.image}
+                        alt={product.name}
                         fill
                         className={styles.productImage}
                         style={{ objectFit: 'cover' }}
                       />
                       <div className={styles.badge}>{product.category}</div>
                     </div>
-                    
+
                     <div className={styles.productInfo}>
                       <div className={styles.rating}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--clr-blue)" stroke="var(--clr-blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -205,7 +206,7 @@ export default function ShopClient() {
                         <span>{product.rating}</span>
                       </div>
                       <h3 className={styles.productName}>{product.name}</h3>
-                      <p className={styles.productPrice}>${product.price.toFixed(2)}</p>
+                      <p className={styles.productPrice}>₹{product.price.toFixed(2)}</p>
                     </div>
                   </div>
                 ))}
@@ -218,7 +219,7 @@ export default function ShopClient() {
                 </svg>
                 <h3>No products found</h3>
                 <p>Try adjusting your search or filters to find what you&apos;re looking for.</p>
-                <button 
+                <button
                   className={styles.resetBtn}
                   onClick={() => {
                     setSearchQuery('');
@@ -233,11 +234,11 @@ export default function ShopClient() {
           </main>
         </div>
       </div>
-      
+
       {/* Product Details Modal */}
-      <ProductModal 
-        product={selectedProduct} 
-        onClose={() => setSelectedProduct(null)} 
+      <ProductModal
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
       />
     </section>
   );
